@@ -44,7 +44,7 @@ async def _run(data: bytes) -> dict:
         raise HTTPException(400, str(exc))
 
 
-@app.get("/")
+@app.api_route("/", methods=["GET", "HEAD"])
 def health():
     return {"ok": True, "service": "vibeos-tagger"}
 
