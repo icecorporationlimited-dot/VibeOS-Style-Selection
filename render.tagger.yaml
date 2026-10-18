@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: vibeos-tagger
+    runtime: docker
+    plan: starter
+    healthCheckPath: /
+    autoDeploy: true
+    envVars:
+      - key: TAGGER_API_KEY
+        sync: false
